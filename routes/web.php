@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/company', 'CompanyController@allCompany');
+
+Route::get('/company/edit/{id}', 'CompanyController@editCompany');
+Route::post('/company/edit/{id}', 'CompanyController@updateCompany');
+
+Route::post('/company', 'CompanyController@newCompany');
+
+Route::post('/newcompany', 'CompanyController@newCompany');
